@@ -157,7 +157,7 @@ p{
   font-size: 36px;
 }
 p1{
-  font-size: 2;
+  font-size: 5;
 }
 h1 {
   margin-bottom: 50px;
@@ -171,6 +171,7 @@ h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
 }
+
 .clearfix:after {
   content: "\0020";
   visibility: hidden;
@@ -3122,6 +3123,11 @@ section,
 /*--------------------------------------------------------------
 # Faq Section
 --------------------------------------------------------------*/
+    .benefit::before {
+      content: "✔ ";
+      color: #FFD700;
+ 
+    }
 .faq .faq-title {
   font-size: 2.5rem;
   font-weight: 700;
@@ -3130,7 +3136,7 @@ section,
 }
 
 .faq .faq-description {
-  font-size: 1rem;
+  font-size: 36px;
   color: var(--default-color);
   margin-bottom: 2rem;
 }
@@ -3141,11 +3147,16 @@ section,
 
 .faq .faq-container .faq-item {
   background-color: var(--surface-color);
+  width: auto;
+  min-height: 100px; /* Atur tinggi minimum yang seragam */
   position: relative;
   padding: 20px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   border-radius: 10px;
   overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .faq .faq-container .faq-item:last-child {
@@ -3174,6 +3185,7 @@ section,
 
 .faq .faq-container .faq-item .faq-content {
   display: grid;
+  
   grid-template-rows: 0fr;
   transition: 0.3s ease-in-out;
   visibility: hidden;
@@ -3181,6 +3193,7 @@ section,
 }
 
 .faq .faq-container .faq-item .faq-content p {
+  font-size: medium;
   margin-bottom: 0;
   overflow: hidden;
 }
